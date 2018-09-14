@@ -29,12 +29,12 @@ namespace Houseware.Controllers
 
             foreach (var dbItem in dbItems)
             {
-                drinks.Add(MapDbDrinkToDrinkViewModel(dbItem));
+                drinks.Add(MapDbItemToItemViewModel(dbItem));
             }
             return drinks;
         }
 
-        private ItemViewModel MapDbDrinkToDrinkViewModel(SSItem dbItem) => new ItemViewModel()
+        private ItemViewModel MapDbItemToItemViewModel(SSItem dbItem) => new ItemViewModel()
         {
             ItemId = dbItem.ItemId,
             Name = dbItem.Name,
